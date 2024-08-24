@@ -17,3 +17,4 @@ Este es el repositorio de la matería Ingeniería y Calidad de Software de la ca
 <br/>
 **Noel Araoz 78226:** https://github.com/NoelAraoz78226
 <br/>
+**María Torazza 81872:** https://github.com/titatorazza 
