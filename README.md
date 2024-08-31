@@ -18,3 +18,56 @@ Este es el repositorio de la matería Ingeniería y Calidad de Software de la ca
 **Noel Araoz 78226:** https://github.com/NoelAraoz78226
 <br/>
 **María Torazza 81872:** https://github.com/titatorazza 
+
+ISW-2024-Grupo-2
+|
+|─── Teórico
+|    └─── UnidadN<nro>
+|                └─── Diapositivas
+|                └─── Bibliografía
+|    └─── Trabajos de Investigación
+|                └─── TrabajoInvestigaciónN<nro>
+|   
+|
+|─── Práctico
+|    ├─── Trabajos Prácticos Evaluables
+|                  └─── TrabajoPracticoN<nro>
+|            
+|    └─── Trabajos Prácticos No Evaluables
+|                  └───  TrabajoPracticoN<nro>
+| 
+|    └─── Guías de Trabajos Prácticos  
+|  
+|─── Materiales Extra
+|          └─── Resúmenes
+|
+|─── ISW_Modalidad_2C_2024
+|
+|─── ISW_PlanEstudio_2C_2024
+|
+|─── ISW_Reglas_Nombramiento
+|
+|─── README.md
+
+
+### Ítems de configuración 
+
+| Nombre  		| Regla de nombrado                          	| Ubicación física              				|
+|-----------------------------------------------|-----------------------------------------------|---------------------------------------------------------------|
+| Modalidad Académica            		| ISW_Modalidad_2C_2024.pdf               	| ISW-2024-Grupo-2-	                                |
+| Plan de Estudio 	| ISW_PlanEstudio_2C_2024.pdf           	| ISW-2024-Grupo-2-              |
+| Bibliografía                           	| ISW_BIB_<<NombreLibro>>_<<Autor1>>_<<AutorN>>.pdf			| ISW-2024-Grupo-2-/Teorico/Bibliografía/<<Tema>>			|
+| Trabajo Práctico Evaluables        		| ISW_TP<<Nro>_<<Nombre Item>>_Evaluable.<<ext>>           | ISW-2024-Grupo-2-/Practico/Trabajos Practicos Evaluables /TrabajoPracticoN<<nro>>	        |
+| Trabajo Práctico No Evaluables   | ISW_TP<<Nro>_<<Nombre Item>>_NoEvaluable.<<ext>>         	| ISW-2024-Grupo-2-/Practico/Trabajos Practicos No Evaluables /TrabajoPracticoN<<nro>>        |
+| Resolucion Trabajos Investigación | ISW_TI<<Nro>>_<<Nombre Ítem>>.<<ext>>      | ISW-2024-Grupo-2-/Teorico/Trabajos de Investigación/TrabajoInvestigacionN<<nro>> |
+| Diapositivas | ISW_PPT_<nro>_<tema>_U<unidad>.<<ext>>      | ISW-2024-Grupo-2-/Teórico/Diapositivas/UnidadN<<Nro>> |
+| Reglas de nombramiento         	| ISW_Reglas_Nombramiento.pdf                          | ISW-2024-Grupo-2-             |
+| Guía de trabajos prácticos			| ISW_2024_<GuiaTrabajosPracticosResueltos>.pdf                        	| ISW-2024-Grupo-2-/Practico/Guias Trabajos Practicos/<Guia> 				|
+| Templates                                     | ISW_Tem_<<NombreTemplate>>.<<ext>>          | ISW-2024-Grupo-2-/Templatess				|
+| Clases Grabadas             	 	| ISW_ClasesGrabadas.xslx       	| ISW-2024-Grupo-2-/Materiales Extra/Clases Grabadas				|
+| Enunciados TP   	 	| ISW_EnunciadosTPEvaluables20242doCuat.pdf   	| ISW-2024-Grupo-2-/Practico			|
+
+
+
+            
+
