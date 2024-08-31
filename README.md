@@ -19,7 +19,9 @@ Este es el repositorio de la matería Ingeniería y Calidad de Software de la ca
 <br/>
 **María Torazza 81872:** https://github.com/titatorazza 
 
-ISW-2024-Grupo-2
+## Estructura del repositorio 
+```
+ISW-2024-Grupo-2-
 |
 |─── Teórico
 |    └─── UnidadN<nro>
@@ -48,9 +50,9 @@ ISW-2024-Grupo-2
 |─── ISW_Reglas_Nombramiento
 |
 |─── README.md
+```
 
-
-### Ítems de configuración 
+## Ítems de configuración 
 
 | Nombre  		| Regla de nombrado                          	| Ubicación física              				|
 |-----------------------------------------------|-----------------------------------------------|---------------------------------------------------------------|
