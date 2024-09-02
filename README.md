@@ -70,6 +70,10 @@ ISW-2024-Grupo-2-
 | Enunciados TP   	 	| ISW_EnunciadosTPEvaluables20242doCuat.pdf   	| ISW-2024-Grupo-2-/Practico			|
 
 
+## Linea Base
 
+La regla de nombramiento para la identificacion de las baselines sera con el formato **v1.X** siendo X el valor a incrementar con cada baseline.
+Las baselines seran definidas con cada trabajo practico que el grupo reciba como aprobado e incrementara el valor de X en una unidad (ej: v1.1, v1.2)
+La primer baseline sera la unica que se desvie de este criterio y su definicion concuerda con la finalizacion del TP4 para ser entregado (considerando esta la primera version estable del proyecto), por lo que se define antes de su calificacion.
             
 
