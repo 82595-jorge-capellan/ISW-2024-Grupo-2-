@@ -58,14 +58,14 @@ ISW-2024-Grupo-2-
 |-----------------------------------------------|-----------------------------------------------|---------------------------------------------------------------|
 | Modalidad Académica            		| ISW_Modalidad_2C_2024.pdf               	| ISW-2024-Grupo-2-	                                |
 | Plan de Estudio 	| ISW_PlanEstudio_2C_2024.pdf           	| ISW-2024-Grupo-2-              |
-| Bibliografía                           	| ISW_BIB_<<NombreLibro>>_<<Autor1>>_<<AutorN>>.pdf			| ISW-2024-Grupo-2-/Teorico/Bibliografía/<<Tema>>			|
-| Trabajo Práctico Evaluables        		| ISW_TP<<Nro>_<<Nombre Item>>_Evaluable.<<ext>>           | ISW-2024-Grupo-2-/Practico/Trabajos Practicos Evaluables /TrabajoPracticoN<<nro>>	        |
-| Trabajo Práctico No Evaluables   | ISW_TP<<Nro>_<<Nombre Item>>_NoEvaluable.<<ext>>         	| ISW-2024-Grupo-2-/Practico/Trabajos Practicos No Evaluables /TrabajoPracticoN<<nro>>        |
-| Resolucion Trabajos Investigación | ISW_TI<<Nro>>_<<Nombre Ítem>>.<<ext>>      | ISW-2024-Grupo-2-/Teorico/Trabajos de Investigación/TrabajoInvestigacionN<<nro>> |
-| Diapositivas | ISW_PPT_<nro>_<tema>_U<unidad>.<<ext>>      | ISW-2024-Grupo-2-/Teórico/Diapositivas/UnidadN<<Nro>> |
+| Bibliografía                           	| ISW_BIB_\<\<NombreLibro>>_\<\<Autor1>>_\<\<AutorN>>.pdf			| ISW-2024-Grupo-2-/Teorico/Bibliografía/\<\<Tema>>			|
+| Trabajo Práctico Evaluables        		| ISW_TP\<\<Nro>_\<\<Nombre Item>>_Evaluable.\<\<ext>>           | ISW-2024-Grupo-2-/Practico/Trabajos Practicos Evaluables /TrabajoPracticoN\<\<nro>>	        |
+| Trabajo Práctico No Evaluables   | ISW_TP\<\<Nro>_\<\<Nombre Item>>_NoEvaluable.\<\<ext>>         	| ISW-2024-Grupo-2-/Practico/Trabajos Practicos No Evaluables /TrabajoPracticoN\<\<nro>>        |
+| Resolucion Trabajos Investigación | ISW_TI\<\<Nro>>_\<\<Nombre Ítem>>.\<\<ext>>      | ISW-2024-Grupo-2-/Teorico/Trabajos de Investigación/TrabajoInvestigacionN\<\<nro>> |
+| Diapositivas | ISW_PPT_\<nro>_\<tema>_U\<unidad>.\<\<ext>>      | ISW-2024-Grupo-2-/Teórico/Diapositivas/UnidadN\<\<Nro>> |
 | Reglas de nombramiento         	| ISW_Reglas_Nombramiento.pdf                          | ISW-2024-Grupo-2-             |
-| Guía de trabajos prácticos			| ISW_2024_<GuiaTrabajosPracticosResueltos>.pdf                        	| ISW-2024-Grupo-2-/Practico/Guias Trabajos Practicos/<Guia> 				|
-| Templates                                     | ISW_Tem_<<NombreTemplate>>.<<ext>>          | ISW-2024-Grupo-2-/Templatess				|
+| Guía de trabajos prácticos			| ISW_2024_\<GuiaTrabajosPracticosResueltos>.pdf                        	| ISW-2024-Grupo-2-/Practico/Guias Trabajos Practicos/\<Guia> 				|
+| Templates                                     | ISW_Tem_\<\<NombreTemplate>>.\<\<ext>>          | ISW-2024-Grupo-2-/Templatess				|
 | Clases Grabadas             	 	| ISW_ClasesGrabadas.xslx       	| ISW-2024-Grupo-2-/Materiales Extra/Clases Grabadas				|
 | Enunciados TP   	 	| ISW_EnunciadosTPEvaluables20242doCuat.pdf   	| ISW-2024-Grupo-2-/Practico			|
 
