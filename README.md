@@ -86,14 +86,14 @@ Glosario
 | PPT	                | Presentacion power point                                                                                                                                                          |
 | BIB	                | Bibliografía                                                                                                                                                                      |
 | TEM	                | Template                                                                                                                                                                          |
-| <<ext>>	        | Nombre de la extensión de un archivo identificado como ítem de configuración.                                                                                                     |
-| <<nro>>	        | Número que hace referencia al número de trabajos prácticos de investigación, trabajos prácticos evaluables, trabajos prácticos no evaluables correspondientes a los documentos.   |
+| <\<ext\>>	        | Nombre de la extensión de un archivo identificado como ítem de configuración.                                                                                                     |
+| <\<nro\>>	        | Número que hace referencia al número de trabajos prácticos de investigación, trabajos prácticos evaluables, trabajos prácticos no evaluables correspondientes a los documentos.   |
 | <<Nombre_Libro>>	| Nombre libro                                                                                                                                                                      |
-| <<Autor>>	| Nombre del autor del libro                                                                                                                                                        |
+| <\<Autor\>>	| Nombre del autor del libro                                                                                                                                                        |
 | <<Nombre_Item>>	| Nombre que hace referencia al contenido abordado en el trabajo práctico                                                                                                           |
-| <<tema>>	        | Nombre que hace referencia al contenido teórico abordado en dicha presentación.                                                                                                   |
-| <<unidad>>	        | Número que hace referencia a la unidad trabajada                                                                                                                                  |
-| <<NombreTemplate>>	| Nombre designado a la plantilla                                                                                                                                                   | 
+| <\<tema\>>	        | Nombre que hace referencia al contenido teórico abordado en dicha presentación.                                                                                                   |
+| <\<unidad\>>	        | Número que hace referencia a la unidad trabajada                                                                                                                                  |
+| <\<NombreTemplate\>>	| Nombre designado a la plantilla                                                                                                                                                   | 
 
 
 ## Linea Base
