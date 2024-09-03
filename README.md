@@ -67,7 +67,7 @@ ISW-2024-Grupo-2-
 | Trabajo Práctico No Evaluables      | ISW_TP\<\<Nro>_\<\<Nombre Item>>_NoEvaluable.\<\<ext>>  | ISW-2024-Grupo-2-/Practico/Trabajos Practicos No Evaluables /TrabajoPracticoN\<\<nro>>|
 | Resolucion Trabajos Investigación   | ISW_TI\<\<Nro>>_\<\<Nombre Ítem>>.\<\<ext>>             | ISW-2024-Grupo-2-/Teorico/Trabajos de Investigación/TrabajoInvestigacionN\<\<nro>>    |
 | Diapositivas                        | ISW_PPT_\<nro>_\<tema>_U\<unidad>.\<\<ext>>             | ISW-2024-Grupo-2-/Teórico/Diapositivas/UnidadN\<\<Nro>>                               |
-| Reglas de nombramiento              | ISW_Reglas_Nombramiento.pdf                             | ISW-2024-Grupo-2-                                                                     |
+| Reglas de nombramiento              | ISW_ReglasNombramiento.docx                             | ISW-2024-Grupo-2-                                                                     |
 | Guía de trabajos prácticos	      | ISW_2024_\<GuiaTrabajosPracticosResueltos>.pdf          | ISW-2024-Grupo-2-/Practico/Guias Trabajos Practicos/\<Guia> 				|
 | Templates                           | ISW_Tem_\<\<NombreTemplate>>.\<\<ext>>                  | ISW-2024-Grupo-2-/Templatess				                                |
 | Clases Grabadas             	      | ISW_ClasesGrabadas.xslx       	                        | ISW-2024-Grupo-2-/Materiales Extra/Clases Grabadas				        |
