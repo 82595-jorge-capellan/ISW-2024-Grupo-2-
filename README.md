@@ -41,18 +41,17 @@ ISW-2024-Grupo-2-
 |    └─── Guías de Trabajos Prácticos  
 |  
 |─── Materiales Extra
-|          └─── Resúmenes
 |          └─── Clases grabadas
 |
 |
 |─── Templates
 |
 |
-|─── ISW_Modalidad_2C_2024
+|─── ISW_Modalidad_2C_2024.pdf
 |
-|─── ISW_PlanEstudio_2C_2024
+|─── ISW_PlanEstudio_2C_2024.pdf
 |
-|─── ISW_Reglas_Nombramiento
+|─── ISW_Reglas_Nombramiento.docx
 |
 |─── README.md
 ```
@@ -73,6 +72,8 @@ ISW-2024-Grupo-2-
 | Templates                           | ISW_Tem_\<\<NombreTemplate>>.\<\<ext>>                  | ISW-2024-Grupo-2-/Templatess				                                |
 | Clases Grabadas             	      | ISW_ClasesGrabadas.xslx       	                        | ISW-2024-Grupo-2-/Materiales Extra/Clases Grabadas				        |
 | Enunciados TP   	 	      | ISW_EnunciadosTPEvaluables20242doCuat.pdf   	        | ISW-2024-Grupo-2-/Practico			                                        |
+| Herramientas para presentacion de   | ISW_HerramientasPresentacionInformacion.pdf             | ISW-2024-Grupo 2-/Materiales Extra                                                    |
+| informacion                         |                                                         |                                                                                       |
 
 
 ## Linea Base
