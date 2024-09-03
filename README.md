@@ -1,4 +1,4 @@
-# ISW-2024-Grupo-nro-
+# ISW-2024-Grupo-nro-2-
 
 ## Ingeniería y Calidad de Software - 2024 
 Este es el repositorio de la matería Ingeniería y Calidad de Software de la carrera Ingeniería en Sistemas de Información, en este se incluira material relevante ya sea generado por la catedra o por nuestra cuenta que nos ayudara a llevar a cabo la aprobación de la asignatura.
@@ -67,13 +67,33 @@ ISW-2024-Grupo-2-
 | Trabajo Práctico No Evaluables      | ISW_TP\<\<Nro>_\<\<Nombre Item>>_NoEvaluable.\<\<ext>>  | ISW-2024-Grupo-2-/Practico/Trabajos Practicos No Evaluables /TrabajoPracticoN\<\<nro>>|
 | Resolucion Trabajos Investigación   | ISW_TI\<\<Nro>>_\<\<Nombre Ítem>>.\<\<ext>>             | ISW-2024-Grupo-2-/Teorico/Trabajos de Investigación/TrabajoInvestigacionN\<\<nro>>    |
 | Diapositivas                        | ISW_PPT_\<nro>_\<tema>_U\<unidad>.\<\<ext>>             | ISW-2024-Grupo-2-/Teórico/Diapositivas/UnidadN\<\<Nro>>                               |
-| Reglas de nombramiento              | ISW_ReglasNombramiento.docx                             | ISW-2024-Grupo-2-                                                                     |
+| Reglas de nombramiento              | ISW_Reglas_Nombramiento.docx                             | ISW-2024-Grupo-2-                                                                     |
 | Guía de trabajos prácticos	      | ISW_2024_\<GuiaTrabajosPracticosResueltos>.pdf          | ISW-2024-Grupo-2-/Practico/Guias Trabajos Practicos/\<Guia> 				|
 | Templates                           | ISW_Tem_\<\<NombreTemplate>>.\<\<ext>>                  | ISW-2024-Grupo-2-/Templatess				                                |
 | Clases Grabadas             	      | ISW_ClasesGrabadas.xslx       	                        | ISW-2024-Grupo-2-/Materiales Extra/Clases Grabadas				        |
 | Enunciados TP   	 	      | ISW_EnunciadosTPEvaluables20242doCuat.pdf   	        | ISW-2024-Grupo-2-/Practico			                                        |
 | Herramientas para presentacion de   | ISW_HerramientasPresentacionInformacion.pdf             | ISW-2024-Grupo 2-/Materiales Extra                                                    |
 | informacion                         |                                                         |                                                                                       |
+
+Glosario
+
+|Etiqueta	        |Valor
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ISW	                | Ingeniería de software                                                                                                                                                            |
+| TP	                | Trabajo práctico                                                                                                                                                                  |
+| TI	                | Trabajo de investigación                                                                                                                                                          |
+| 2C	                | Segundo cuatrimestre                                                                                                                                                              |
+| PPT	                | Presentacion power point                                                                                                                                                          |
+| BIB	                | Bibliografía                                                                                                                                                                      |
+| TEM	                | Template                                                                                                                                                                          |
+| <<ext>>	        | Nombre de la extensión de un archivo identificado como ítem de configuración.                                                                                                     |
+| <<nro>>	        | Número que hace referencia al número de trabajos prácticos de investigación, trabajos prácticos evaluables, trabajos prácticos no evaluables correspondientes a los documentos.   |
+| <<Nombre_Libro>>	| Nombre libro                                                                                                                                                                      |
+| <<Autor>>	| Nombre del autor del libro                                                                                                                                                        |
+| <<Nombre_Item>>	| Nombre que hace referencia al contenido abordado en el trabajo práctico                                                                                                           |
+| <<tema>>	        | Nombre que hace referencia al contenido teórico abordado en dicha presentación.                                                                                                   |
+| <<unidad>>	        | Número que hace referencia a la unidad trabajada                                                                                                                                  |
+| <<NombreTemplate>>	| Nombre designado a la plantilla                                                                                                                                                   | 
 
 
 ## Linea Base
