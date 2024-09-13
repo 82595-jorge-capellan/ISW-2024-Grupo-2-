@@ -1,10 +1,52 @@
 
+import { ProvinciasGet, LocalidadesProvincia} from "../services/formularioService.service";
+import { useState } from "react";
+
 
 const Formulario = () => {
 
+    const [datosProvincias, setDatosProvincias] = useState([]);
+    const [datosLocalidades, setDatosSeleccionados] = useState([]);
+    const [datosLocalidadesDestino, setLocalidadesDestino] = useState([]);
+    const [datosProvinciasDestino, setDatosProvinciasDestino] = useState([]);
+
+    const HandleGet = async() => {
+      
+      let provincias = await ProvinciasGet();        
+      setDatosProvincias(provincias);
+    }
+
+    const HandleProvinciaGet = async(event) => {
+        const provinciaSeleccionada = event.target.value;
+        console.log(provinciaSeleccionada)
+
+        let localidades = await LocalidadesProvincia(provinciaSeleccionada);
+        setDatosSeleccionados(localidades)
+
+    }
+
+
+    const HandleGetDestino = async() => {
+      
+      let provincias = await ProvinciasGet();        
+      setDatosProvinciasDestino(provincias);
+    }
+
+    const HandleLocalidadesDestino = async(event) => {
+      
+      const provinciasDestino = event.target.value;
+      let localidadesDestino = await LocalidadesProvincia(provinciasDestino);
+
+      setLocalidadesDestino(localidadesDestino);
+
+    }
+    
+
     return (
+      <>
+      {console.log(datosProvincias)}
         <div className="container mt-4 formulario">
-          <h4>Publicar Pedido de Envío</h4>
+          <h4 className="titulo">Publicar Pedido de Envío</h4>
           <form>
             <div className="mb-3">
               <label className="form-label">Ingrese el tipo de carga:</label>
@@ -30,18 +72,33 @@ const Formulario = () => {
             <div className="row mt-2">
               <div className="col-md-6">
                 <label className="form-label">Provincia</label>
-                <select className="form-select">
+                <select className="form-select" onClick={HandleGet} onChange={HandleProvinciaGet}>
                   <option value="">Seleccionar</option>
-                  <option value="prov1">Provincia 1</option>
-                  <option value="prov2">Provincia 2</option>
+                  {datosProvincias.length > 0 ? (
+                    datosProvincias.map((fila, index) => (
+                      <option key={index} value={fila.id}>
+                        {fila.nombre}
+                      </option>
+                    ))
+                    ) : (
+                    <option value="">Cargando provincias...</option>
+                  )}
                 </select>
               </div>
               <div className="col-md-6">
                 <label className="form-label">Localidad</label>
                 <select className="form-select">
                   <option value="">Seleccionar</option>
-                  <option value="loc1">Localidad 1</option>
-                  <option value="loc2">Localidad 2</option>
+                  {datosLocalidades.length > 0 ? (
+                    datosLocalidades.map((fila, index) => (
+                      <option key={index} value={fila.nombre}>
+                        {fila.nombre}
+                      </option>
+                    ))
+                    ) : (
+                    <option value="">Cargando Localidades...</option>
+                  )}
+
                 </select>
               </div>
             </div>
@@ -65,19 +122,33 @@ const Formulario = () => {
             <div className="row mt-2">
               <div className="col-md-6">
                 <label className="form-label">Provincia</label>
-                <select className="form-select">
-                    {/* aca va la API para ver las provincias */}
+                <select className="form-select" onClick={HandleGetDestino} onChange={HandleLocalidadesDestino}>
                   <option value="">Seleccionar</option>
-                  <option value="prov1">Provincia 1</option>
-                  <option value="prov2">Provincia 2</option>
+                  {datosProvinciasDestino.length > 0 ? (
+                    datosProvinciasDestino.map((fila, index) => (
+                      <option key={index} value={fila.id}>
+                        {fila.nombre}
+                      </option>
+                    ))
+                    ) : (
+                    <option value="">Cargando provincias...</option>
+                  )}
                 </select>
               </div>
               <div className="col-md-6">
                 <label className="form-label">Localidad</label>
                 <select className="form-select">
                   <option value="">Seleccionar</option>
-                  <option value="loc1">Localidad 1</option>
-                  <option value="loc2">Localidad 2</option>
+                  <option value="">Seleccionar</option>
+                  {datosLocalidadesDestino.length > 0 ? (
+                    datosLocalidadesDestino.map((fila, index) => (
+                      <option key={index} value={fila.nombre}>
+                        {fila.nombre}
+                      </option>
+                    ))
+                    ) : (
+                    <option value="">Cargando Localidades...</option>
+                  )}
                 </select>
               </div>
             </div>
@@ -109,6 +180,8 @@ const Formulario = () => {
             </button>
           </form>
         </div>
+
+      </>
       );
     
 }

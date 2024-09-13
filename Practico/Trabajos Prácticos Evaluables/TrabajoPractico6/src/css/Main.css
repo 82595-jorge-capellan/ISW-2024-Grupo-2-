@@ -1,16 +1,41 @@
-.formulario, body {
-    background: linear-gradient(to top, #CAF0F8, #90E0EF, #00B4D8, #0077B6, #03045E);
-    height: 1000px; /* Ajusta la altura según tus necesidades */
+body {
+    /* background: linear-gradient(to top,  #0077B6, #03045E);  */
+    background:#03045E !important;
+    /*, , #00B4D8 */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    margin: 0;
 
 
 }
 
-h4, label, h2, h3, h5 {
-
-    color:white !important;
+.formulario {
+    background-color: rgba(255, 255, 255, 0.5); 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     
 }
 
+ h4, label, h2, h3, h5, input {
+
+    color: #CAF0F8 !important;
+    
+}
+
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+/*
 h4, h5, h3 {
     text-decoration: underline;
-}
+} */
