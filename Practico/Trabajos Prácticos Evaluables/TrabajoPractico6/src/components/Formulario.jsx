@@ -175,9 +175,13 @@ const Formulario = () => {
               <input type="file" className="form-control" multiple />
             </div>
     
+            <div className="d-flex">
+
             <button type="submit" className="btn btn-primary mt-4 mb-3">
               Publicar
             </button>
+            
+            </div>
           </form>
         </div>
 
