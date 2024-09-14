@@ -14,10 +14,9 @@ export const ProvinciasGet = async () => {
 
 export const LocalidadesProvincia = async (provincia) => {
 
+    console.log(provincia);
     try{
         let localidadesProvinciaGet = await axios.get(`https://apis.datos.gob.ar/georef/api/localidades?provincia=${provincia}&campos=id,nombre&max=100`) 
-        
-        console.log(localidadesProvinciaGet)
         
         return localidadesProvinciaGet.data.localidades;
     }catch(error){

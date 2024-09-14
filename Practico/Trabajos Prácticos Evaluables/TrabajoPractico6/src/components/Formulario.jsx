@@ -1,6 +1,7 @@
 
 import { ProvinciasGet, LocalidadesProvincia} from "../services/formularioService.service";
 import { useState } from "react";
+import {useForm} from "react-hook-form";
 
 
 const Formulario = () => {
@@ -9,16 +10,15 @@ const Formulario = () => {
     const [datosLocalidades, setDatosSeleccionados] = useState([]);
     const [datosLocalidadesDestino, setLocalidadesDestino] = useState([]);
     const [datosProvinciasDestino, setDatosProvinciasDestino] = useState([]);
+    const{register, handleSubmit, formState:{errors}} = useForm();
 
     const HandleGet = async() => {
-      
       let provincias = await ProvinciasGet();        
       setDatosProvincias(provincias);
     }
 
     const HandleProvinciaGet = async(event) => {
         const provinciaSeleccionada = event.target.value;
-        console.log(provinciaSeleccionada)
 
         let localidades = await LocalidadesProvincia(provinciaSeleccionada);
         setDatosSeleccionados(localidades)
@@ -40,21 +40,49 @@ const Formulario = () => {
       setLocalidadesDestino(localidadesDestino);
 
     }
+
+    const onSubmit = (data) => {
+      if(validarFechas(data.FechaRetiro, data.FechaEntrega)){
+        console.log("form publicada");
+        console.log(data);
+      }else{
+        console.log("error en las fechas");
+      }
+
+      
+    }
+
+    const validarFechas = (fechaRetiro, fechaEntrega) => {
+      if (fechaRetiro <= fechaEntrega) {
+        return true;
+      }else{
+        return false;
+      }
+    }
     
 
     return (
       <>
-      {console.log(datosProvincias)}
+      {//console.log(datosProvincias)
+      }
         <div className="container mt-4 formulario">
           <h4 className="titulo">Publicar Pedido de Envío</h4>
-          <form>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">
               <label className="form-label">Ingrese el tipo de carga:</label>
-              <select className="form-select">
+              <select name="TipoCarga" className="form-select"
+                {...register("TipoCarga",
+                  {
+                    required: "Debe ingresar el tipo de carga"
+                  })}
+              >
                 <option value="">Seleccionar</option>
-                <option value="tipo1">Tipo 1</option>
-                <option value="tipo2">Tipo 2</option>
+                <option value="Documentacion">Documentacion</option>
+                <option value="Paquete">Paquete</option>
+                <option value="Granos">Granos</option>
+                <option value="Hacienda">Hacienda</option>
               </select>
+              <span> {errors.TipoCarga && errors.TipoCarga.message}</span>
             </div>
     
             {/* Domicilio de Retiro */}
@@ -62,17 +90,39 @@ const Formulario = () => {
             <div className="row">
               <div className="col-md-6">
                 <label className="form-label">Calle</label>
-                <input type="text" className="form-control" />
+                <input name="DomicilioRetiro" type="text" className="form-control" 
+                {...register("DomicilioRetiro",
+                  {
+                    required: "Debe ingresar el domicilio de retiro"
+                  })}
+                />
+                <span> {errors.DomicilioRetiro && errors.DomicilioRetiro.message}</span>
               </div>
               <div className="col-md-6">
                 <label className="form-label">Número</label>
-                <input type="text" className="form-control" />
+                <input name="NumeroDomicilioRetiro" type="text" className="form-control"
+                {...register("NumeroDomicilioRetiro",
+                  {
+                    required: "Debe ingresar el numero del domicilio de retiro",
+                    pattern:{
+                      value:/^[0-9]*$/,
+                      message: "El numero de domicilio debe contener solo digitos"
+                }})}
+                
+                />
+                <span> {errors.NumeroDomicilioRetiro && errors.NumeroDomicilioRetiro.message}</span>
               </div>
             </div>
             <div className="row mt-2">
               <div className="col-md-6">
                 <label className="form-label">Provincia</label>
-                <select className="form-select" onClick={HandleGet} onChange={HandleProvinciaGet}>
+                <select name="ProvinciaRetiro" className="form-select" onClick={HandleGet} onChange={HandleProvinciaGet}
+                {...register("ProvinciaRetiro",
+                  {
+                    required: "Debe ingresar una provincia de retiro",
+                    onChange: (e) => {HandleProvinciaGet(e)},
+                  })}
+                >
                   <option value="">Seleccionar</option>
                   {datosProvincias.length > 0 ? (
                     datosProvincias.map((fila, index) => (
@@ -84,10 +134,16 @@ const Formulario = () => {
                     <option value="">Cargando provincias...</option>
                   )}
                 </select>
+                <span> {errors.ProvinciaRetiro && errors.ProvinciaRetiro.message}</span>
               </div>
               <div className="col-md-6">
                 <label className="form-label">Localidad</label>
-                <select className="form-select">
+                <select name="LocalidadRetiro" className="form-select"
+                {...register("LocalidadRetiro",
+                  {
+                    required: "Debe ingresar una localidad de retiro",
+                  })}
+                >
                   <option value="">Seleccionar</option>
                   {datosLocalidades.length > 0 ? (
                     datosLocalidades.map((fila, index) => (
@@ -100,11 +156,16 @@ const Formulario = () => {
                   )}
 
                 </select>
+                <span> {errors.LocalidadRetiro && errors.LocalidadRetiro.message}</span>
               </div>
             </div>
             <div className="mb-3 mt-3">
               <label className="form-label">Referencia (opcional)</label>
-              <textarea className="form-control" rows="2"></textarea>
+              <textarea name="ReferenciaRetiro" className="form-control" rows="2"
+              {...register("ReferenciaRetiro",
+                )}
+              >
+              </textarea>
             </div>
     
             {/* Domicilio de Destino */}
@@ -112,17 +173,38 @@ const Formulario = () => {
             <div className="row">
               <div className="col-md-6">
                 <label className="form-label">Calle</label>
-                <input type="text" className="form-control" />
+                <input name="DomicilioDestino" type="text" className="form-control"
+                {...register("DomicilioDestino",
+                  {
+                    required: "Debe ingresar el domicilio de destino"
+                  })}
+                />
+                <span> {errors.DomicilioDestino && errors.DomicilioDestino.message}</span>
               </div>
               <div className="col-md-6">
                 <label className="form-label">Número</label>
-                <input type="text" className="form-control" />
+                <input name="NumeroDomicilioDestino" type="text" className="form-control" 
+                {...register("NumeroDomicilioDestino",
+                  {
+                    required: "Debe ingresar el numero del domicilio de destino",
+                    pattern:{
+                      value:/^[0-9]*$/,
+                      message: "El numero de domicilio debe contener solo digitos"
+                }})}
+                />
+                <span> {errors.NumeroDomicilioDestino && errors.NumeroDomicilioDestino.message}</span>
               </div>
             </div>
             <div className="row mt-2">
               <div className="col-md-6">
                 <label className="form-label">Provincia</label>
-                <select className="form-select" onClick={HandleGetDestino} onChange={HandleLocalidadesDestino}>
+                <select name="ProvinciaDestino" className="form-select" onClick={HandleGetDestino} onChange={HandleLocalidadesDestino}
+                {...register("ProvinciaDestino",
+                  {
+                    required: "Debe ingresar una provincia de destino",
+                    onChange: (e) => {HandleLocalidadesDestino(e)},
+                  })}
+                >
                   <option value="">Seleccionar</option>
                   {datosProvinciasDestino.length > 0 ? (
                     datosProvinciasDestino.map((fila, index) => (
@@ -134,11 +216,16 @@ const Formulario = () => {
                     <option value="">Cargando provincias...</option>
                   )}
                 </select>
+                <span> {errors.ProvinciaDestino && errors.ProvinciaDestino.message}</span>
               </div>
               <div className="col-md-6">
                 <label className="form-label">Localidad</label>
-                <select className="form-select">
-                  <option value="">Seleccionar</option>
+                <select name="LocalidadDestino" className="form-select"
+                {...register("LocalidadDestino",
+                  {
+                    required: "Debe ingresar una localidad de destino",
+                  })}
+                >
                   <option value="">Seleccionar</option>
                   {datosLocalidadesDestino.length > 0 ? (
                     datosLocalidadesDestino.map((fila, index) => (
@@ -150,29 +237,53 @@ const Formulario = () => {
                     <option value="">Cargando Localidades...</option>
                   )}
                 </select>
+                <span> {errors.LocalidadDestino && errors.LocalidadDestino.message}</span>
               </div>
             </div>
             <div className="mb-3 mt-2">
               <label className="form-label">Referencia (opcional)</label>
-              <textarea className="form-control" rows="2"></textarea>
+              <textarea name="ReferenciaDestino" className="form-control" rows="2"
+              {...register("ReferenciaDestino",
+              )}
+              >
+              </textarea>
             </div>
     
             {/* Fechas y Fotos */}
             <div className="row">
               <div className="col-md-6">
                 <label className="form-label">Fecha de Retiro</label>
-                <input type="date" className="form-control" />
+                <input name="FechaRetiro" type="date" className="form-control" min={new Date().toJSON().slice(0, 10)}
+                {...register("FechaRetiro",
+                  {
+                    required: "Debe ingresar la fecha de retiro",
+                    
+                  })}
+                />
+                <span> {errors.FechaRetiro && errors.FechaRetiro.message}</span>
               </div>
               <div className="col-md-6">
                 <label className="form-label">Fecha de Entrega</label>
-                <input type="date" className="form-control" />
+                <input name="FechaEntrega" type="date" className="form-control" min={new Date().toJSON().slice(0, 10)}
+                {...register("FechaEntrega",
+                  {
+                    required: "Debe ingresar la fecha de entrega",
+                    
+                  })}
+                />
+                <span> {errors.FechaEntrega && errors.FechaEntrega.message}</span>
               </div>
             </div>
     
             {/* Subir Fotos */}
             <div className="mt-3">
               <label className="form-label">Fotos</label>
-              <input type="file" className="form-control" multiple />
+              <input name="Fotos" type="file" className="form-control" multiple
+              {...register("Fotos",
+                {
+                  
+                })}
+              />
             </div>
     
             <div className="d-flex">
