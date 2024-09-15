@@ -24,23 +24,27 @@ export const LocalidadesProvincia = async (provincia) => {
     }
 }
 
-export const SendEmail = async (formCont) => {
-    formCont = {
-        destino: 'mecex61246@asaud.com',
-        tipo_pedido: 'Envío Especial',
-        provincia_origen: 'Buenos Aires',
-        localidad_origen: 'Capital Federal',
-        calle_origen: 'Av. Santa Fe',
-        numero_origen: '1234',
-        referencia_origen: 'Ref123',
-        provincia_destino: 'CABA',
-        localidad_destino: 'Villa Devoto',
-        calle_destino: 'Calle Falsa',
-        numero_destino: '5678',
-        referencia_destino: 'Ref456',
-        fecha_retiro: '2024-09-20',
-        fecha_entrega: '2024-09-22'
+export const SendEmail = async (data) => {
+
+
+    let formCont = {
+        destino: 'colodnyagustin@gmail.com',
+        tipo_pedido: data.TipoCarga,
+        provincia_origen: data.ProvinciaRetiro, 
+        localidad_origen: data.LocalidadRetiro,  
+        calle_origen: data.DomicilioRetiro, 
+        numero_origen: data.NumeroDomicilioRetiro,  
+        referencia_origen: data.ReferenciaRetiro,
+        provincia_destino: data.ProvinciaDestino, 
+        localidad_destino: data.LocalidadDestino,  
+        calle_destino: data.DomicilioDestino, 
+        numero_destino: data.NumeroDomicilioDestino,  
+        referencia_destino: data.ReferenciaDestino,
+        fecha_retiro: data.FechaRetiro, 
+        fecha_entrega: data.FechaEntrega
     };
+
+
     try {
         const result = await emailjs.send("service_qpb1y7m", "template_whr2i5d", formCont, "X6FT9jkeR_LrJ9SeX");
         console.log(result)

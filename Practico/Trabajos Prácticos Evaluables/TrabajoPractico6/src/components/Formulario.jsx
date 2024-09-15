@@ -7,19 +7,6 @@ import Popup from "./Popup";
 
 const Formulario = () => {
 
-  function submitPedidoDeEnvio(e){
-    e.preventDefault();
-    console.log("Me envio");
-    handleShowPop();
-
-    const formCont = {
-      data: "data"
-    }
-
-    SendEmail(formCont);
-
-  }
-
   const [visibilityPop,setVisibilityPop] = React.useState(false);
 
   function handleClosePop(){
@@ -67,8 +54,8 @@ const Formulario = () => {
 
     const onSubmit = (data) => {
       if(validarFechas(data.FechaRetiro, data.FechaEntrega)){
-        console.log("form publicada");
-        console.log(data);
+        handleShowPop();
+        SendEmail(data);
       }else{
         console.log("error en las fechas");
       }
@@ -87,11 +74,9 @@ const Formulario = () => {
 
     return (
       <>
-      {//console.log(datosProvincias)
-      }
         <div className="container mt-4 formulario">
           <h4 className="titulo">Publicar Pedido de Envío</h4>
-          <form onSubmit={(e) => submitPedidoDeEnvio(e)}>
+          <form  onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">
               <label className="form-label">Ingrese el tipo de carga:</label>
               <select name="TipoCarga" className="form-select"
