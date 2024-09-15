@@ -12,6 +12,18 @@ export const ProvinciasGet = async () => {
 
 }
 
+export const ProvinciaById = async (id) => {
+
+    try{
+        let provinciaID = await axios.get(`https://apis.datos.gob.ar/georef/api/provincias?id=${id}`)
+        console.log(provinciaID)
+        return provinciaID.data.provincias[0].nombre;
+    }catch (error) {
+        return error;
+    }
+}
+
+
 export const LocalidadesProvincia = async (provincia) => {
 
     console.log(provincia);
@@ -30,12 +42,12 @@ export const SendEmail = async (data) => {
     let formCont = {
         destino: 'colodnyagustin@gmail.com',
         tipo_pedido: data.TipoCarga,
-        provincia_origen: data.ProvinciaRetiro, 
+        provincia_origen: await ProvinciaById(data.ProvinciaRetiro), 
         localidad_origen: data.LocalidadRetiro,  
         calle_origen: data.DomicilioRetiro, 
         numero_origen: data.NumeroDomicilioRetiro,  
         referencia_origen: data.ReferenciaRetiro,
-        provincia_destino: data.ProvinciaDestino, 
+        provincia_destino: await ProvinciaById(data.ProvinciaDestino), 
         localidad_destino: data.LocalidadDestino,  
         calle_destino: data.DomicilioDestino, 
         numero_destino: data.NumeroDomicilioDestino,  
