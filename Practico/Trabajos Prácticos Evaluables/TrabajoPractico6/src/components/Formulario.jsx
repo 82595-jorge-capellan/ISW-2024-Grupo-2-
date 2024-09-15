@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProvinciasGet, LocalidadesProvincia} from "../services/formularioService.service";
+import { ProvinciasGet, LocalidadesProvincia, SendEmail} from "../services/formularioService.service";
 import { useState } from "react";
 import {useForm} from "react-hook-form";
 import Popup from "./Popup";
@@ -302,7 +302,7 @@ const Formulario = () => {
             {/* Subir Fotos */}
             <div className="mt-3">
               <label className="form-label">Fotos</label>
-              <input name="Fotos" type="file" multiple accept=".jpg,.png" className="form-control" multiple
+              <input name="Fotos" type="file" multiple accept=".jpg,.png" className="form-control"
               {...register("Fotos",
                 {
                   
