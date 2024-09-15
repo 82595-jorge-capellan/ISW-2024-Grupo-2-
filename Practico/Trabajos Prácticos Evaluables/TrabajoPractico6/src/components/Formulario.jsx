@@ -1,10 +1,34 @@
-
+import React from 'react';
 import { ProvinciasGet, LocalidadesProvincia} from "../services/formularioService.service";
 import { useState } from "react";
 import {useForm} from "react-hook-form";
+import Popup from "./Popup";
 
 
 const Formulario = () => {
+
+  function submitPedidoDeEnvio(e){
+    e.preventDefault();
+    console.log("Me envio");
+    handleShowPop();
+
+    const formCont = {
+      data: "data"
+    }
+
+    SendEmail(formCont);
+
+  }
+
+  const [visibilityPop,setVisibilityPop] = React.useState(false);
+
+  function handleClosePop(){
+      setVisibilityPop(false)
+  }
+  function handleShowPop(){
+      setVisibilityPop(true)
+  }
+  
 
     const [datosProvincias, setDatosProvincias] = useState([]);
     const [datosLocalidades, setDatosSeleccionados] = useState([]);
@@ -67,7 +91,7 @@ const Formulario = () => {
       }
         <div className="container mt-4 formulario">
           <h4 className="titulo">Publicar Pedido de Envío</h4>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={(e) => submitPedidoDeEnvio(e)}>
             <div className="mb-3">
               <label className="form-label">Ingrese el tipo de carga:</label>
               <select name="TipoCarga" className="form-select"
@@ -278,7 +302,7 @@ const Formulario = () => {
             {/* Subir Fotos */}
             <div className="mt-3">
               <label className="form-label">Fotos</label>
-              <input name="Fotos" type="file" className="form-control" multiple
+              <input name="Fotos" type="file" multiple accept=".jpg,.png" className="form-control" multiple
               {...register("Fotos",
                 {
                   
@@ -295,7 +319,7 @@ const Formulario = () => {
             </div>
           </form>
         </div>
-
+        <Popup show={visibilityPop} onClose={handleClosePop} onShow={handleShowPop}></Popup>
       </>
       );
     

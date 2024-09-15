@@ -23,3 +23,11 @@ export const LocalidadesProvincia = async (provincia) => {
         return error;
     }
 }
+
+export const SendEmail = async (formCont) => {
+    try {
+        await axios.post("localhost:34500", formCont)
+    }catch(error){
+        console.log(error)
+    }
+}
