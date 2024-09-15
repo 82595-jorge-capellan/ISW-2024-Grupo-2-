@@ -1,6 +1,7 @@
 body {
     /* background: linear-gradient(to top,  #0077B6, #03045E);  */
-    background:#03045E !important;
+    /*background:#03045E !important;*/
+    background: #CAF0F8 !important;
     /*, , #00B4D8 */
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -12,7 +13,7 @@ body {
 }
 
 .formulario {
-    background-color: rgba(255, 255, 255, 0.5); 
+    background-color: #90E0EFCF; 
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -22,10 +23,14 @@ body {
     
 }
 
- h4, label, h2, h3, h5, input {
+ h4, h2, h3, h5, input, select, textarea {
 
-    color: #CAF0F8 !important;
+    color: #0077B6 !important;
     
+}
+
+label {
+    color: #00B4D8;
 }
 
 
