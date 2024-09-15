@@ -1,13 +1,22 @@
-
-import { ProvinciasGet, LocalidadesProvincia} from "../services/formularioService.service";
+import React from "react";
+import { ProvinciasGet, LocalidadesProvincia, SendEmail} from "../services/formularioService.service";
 import { useState } from "react";
-
+import Button from 'react-bootstrap/Button';
+import Popup from "./Popup";
 
 const Formulario = () => {
 
     function submitPedidoDeEnvio(e){
       e.preventDefault();
       console.log("Me envio");
+      handleShowPop();
+
+      formCont = {
+        //Aca hay q definir mucha porqueria
+      }
+
+      SendEmail(formCont);
+
     }
 
     const [datosProvincias, setDatosProvincias] = useState([]);
@@ -45,10 +54,20 @@ const Formulario = () => {
       setLocalidadesDestino(localidadesDestino);
 
     }
+
+    const [visibilityPop,setVisibilityPop] = React.useState(false);
+
+    function handleClosePop(){
+        setVisibilityPop(false)
+    }
+    function handleShowPop(){
+        setVisibilityPop(true)
+    }
     
 
     return (
       <>
+      
       {console.log(datosProvincias)}
         <div className="container mt-4 formulario">
           <h4 className="titulo">Publicar Pedido de Envío</h4>
@@ -180,12 +199,12 @@ const Formulario = () => {
               <input type="file" className="form-control" multiple accept=".jpg,.png" />
             </div>
     
-            <button type="submit" className="btn btn-primary mt-4 mb-3">
+            <button type="submit" variant="primary" onClick={handleShowPop} className="btn btn-primary mt-4 mb-3">
               Publicar
             </button>
           </form>
         </div>
-
+        <Popup show={visibilityPop} onClose={handleClosePop} onShow={handleShowPop}></Popup>
       </>
       );
     
