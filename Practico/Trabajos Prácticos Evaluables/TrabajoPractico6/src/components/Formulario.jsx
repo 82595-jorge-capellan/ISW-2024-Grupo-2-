@@ -5,6 +5,11 @@ import { useState } from "react";
 
 const Formulario = () => {
 
+    function submitPedidoDeEnvio(e){
+      e.preventDefault();
+      console.log("Me envio");
+    }
+
     const [datosProvincias, setDatosProvincias] = useState([]);
     const [datosLocalidades, setDatosSeleccionados] = useState([]);
     const [datosLocalidadesDestino, setLocalidadesDestino] = useState([]);
@@ -47,7 +52,7 @@ const Formulario = () => {
       {console.log(datosProvincias)}
         <div className="container mt-4 formulario">
           <h4 className="titulo">Publicar Pedido de Envío</h4>
-          <form>
+          <form onSubmit={(e) => submitPedidoDeEnvio(e)}>
             <div className="mb-3">
               <label className="form-label">Ingrese el tipo de carga:</label>
               <select className="form-select">
@@ -172,7 +177,7 @@ const Formulario = () => {
             {/* Subir Fotos */}
             <div className="mt-3">
               <label className="form-label">Fotos</label>
-              <input type="file" className="form-control" multiple />
+              <input type="file" className="form-control" multiple accept=".jpg,.png" />
             </div>
     
             <button type="submit" className="btn btn-primary mt-4 mb-3">
