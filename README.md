@@ -67,7 +67,7 @@ ISW-2024-Grupo-2-
 | Trabajo Práctico No Evaluables      | ISW_TP\<\<Nro>_\<\<Nombre Item>>_NoEvaluable.\<\<ext>>  | ISW-2024-Grupo-2-/Practico/Trabajos Practicos No Evaluables /TrabajoPracticoN\<\<nro>>|
 | Resolucion Trabajos Investigación   | ISW_TI\<\<Nro>>_\<\<Nombre Ítem>>.\<\<ext>>             | ISW-2024-Grupo-2-/Teorico/Trabajos de Investigación/TrabajoInvestigacionN\<\<nro>>    |
 | Diapositivas                        | ISW_PPT_\<nro>_\<tema>_U\<unidad>.\<\<ext>>             | ISW-2024-Grupo-2-/Teórico/Diapositivas/UnidadN\<\<Nro>>                               |
-| Reglas de nombramiento              | ISW_Reglas_Nombramiento.docx                             | ISW-2024-Grupo-2-                                                                     |
+| Reglas de nombramiento              | ISW_Reglas_Nombramiento.docx                            | ISW-2024-Grupo-2-                                                                     |
 | Guía de trabajos prácticos	      | ISW_2024_\<GuiaTrabajosPracticosResueltos>.pdf          | ISW-2024-Grupo-2-/Practico/Guias Trabajos Practicos/\<Guia> 				|
 | Templates                           | ISW_Tem_\<\<NombreTemplate>>.\<\<ext>>                  | ISW-2024-Grupo-2-/Templatess				                                |
 | Clases Grabadas             	      | ISW_ClasesGrabadas.xslx       	                        | ISW-2024-Grupo-2-/Materiales Extra/Clases Grabadas				        |
@@ -89,7 +89,7 @@ Glosario
 | <\<ext\>>	        | Nombre de la extensión de un archivo identificado como ítem de configuración.                                                                                                     |
 | <\<nro\>>	        | Número que hace referencia al número de trabajos prácticos de investigación, trabajos prácticos evaluables, trabajos prácticos no evaluables correspondientes a los documentos.   |
 | <<Nombre_Libro>>	| Nombre libro                                                                                                                                                                      |
-| <\<Autor\>>	| Nombre del autor del libro                                                                                                                                                        |
+| <\<Autor\>>	        | Nombre del autor del libro                                                                                                                                                        |
 | <<Nombre_Item>>	| Nombre que hace referencia al contenido abordado en el trabajo práctico                                                                                                           |
 | <\<tema\>>	        | Nombre que hace referencia al contenido teórico abordado en dicha presentación.                                                                                                   |
 | <\<unidad\>>	        | Número que hace referencia a la unidad trabajada                                                                                                                                  |
